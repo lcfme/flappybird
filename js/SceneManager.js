@@ -70,12 +70,12 @@
 				game.pipes_list.forEach(function(item) {
 					item.render();
 				});
-				game.bird.update();
-				game.bird.render();
+				
 				game.ctx.drawImage(game.SRC['text_game_over'], game.canvas.width / 2 - 204 / 2, 200, 204, 54);
 				score(game.score);
 				game.ctx.save();
-				game.ctx.fontSize = 100;
+				game.ctx.fillSize = 100;
+				game.ctx.fillStyle = '#fff';
 				game.ctx.fontStyle = 'Helvetica';
 				game.ctx.textAlign = 'center';
 				var high = reduceRepeat(game.score_list.sort(function(a, b) {
@@ -84,6 +84,8 @@
 				game.ctx.fillText("最高分" + high, game.canvas.width / 2, 280);
 				game.ctx.fillText("最高分" + game.score, game.canvas.width / 2, 300);
 				game.ctx.restore();
+				game.bird.update();
+				game.bird.render();
 			break;
 
 		}
