@@ -1,2 +1,2 @@
 # flappybird
-https://liuxiansenjs.github.io/flappybird/
+https://lcfme.github.io/flappybird/
